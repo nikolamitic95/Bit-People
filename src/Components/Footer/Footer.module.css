@@ -1,0 +1,16 @@
+.footer {
+    background-color: rgb(204, 32, 32);
+    height: 70px;
+}
+
+.info {
+    padding-top: 25px;
+    color: white;
+    padding-left: 0px !important;
+}
+.time{
+    margin-top: 25px;
+    color: white;
+    text-align: end;
+    padding-right: 0px !important;
+}

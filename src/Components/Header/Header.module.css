@@ -1,0 +1,48 @@
+.header {
+    background-color: rgb(204, 32, 32);
+    margin-bottom: 25px;
+    height: 72px;
+}
+
+.icons {
+    font-size: 25px !important;
+    padding-top: 4px;
+}
+
+.menu{
+    width: 35px;
+    height: 5px;
+    background-color:white;
+    margin: 6px 0;
+}
+      
+.menu:first-child{
+    margin-top: 15px ;
+}
+.flex{
+    display: flex;
+}
+
+.link{
+    font-size: 25px;
+    padding-top: 4px;
+}
+.about{
+    font-size: 25px;
+}
+.link:hover{
+    text-decoration: none;
+    color: white;
+}
+@media only screen and (max-width: 992px) {
+   .link{
+       color: black;
+   }
+   .link:hover{
+     color: black;
+   }
+   .flex{
+       flex-direction: column;
+       padding-left: 15px;
+   }
+  }

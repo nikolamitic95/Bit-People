@@ -1,0 +1,20 @@
+.search{
+    margin-bottom: 10px;
+    display: flex;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+.icon{
+   font-size: 25px;
+   padding-right: 10px;
+   padding-top: 5px;
+}
+.form{
+    width: 100%;
+}
+.formBorder{
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-radius: 0px !important;
+}
