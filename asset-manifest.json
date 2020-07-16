@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/Bit-People/static/css/main.1030fb37.chunk.css",
+    "main.js": "/Bit-People/static/js/main.baab454d.chunk.js",
+    "main.js.map": "/Bit-People/static/js/main.baab454d.chunk.js.map",
+    "runtime-main.js": "/Bit-People/static/js/runtime-main.b851c0a3.js",
+    "runtime-main.js.map": "/Bit-People/static/js/runtime-main.b851c0a3.js.map",
+    "static/css/2.6cc87aa2.chunk.css": "/Bit-People/static/css/2.6cc87aa2.chunk.css",
+    "static/js/2.41a8d376.chunk.js": "/Bit-People/static/js/2.41a8d376.chunk.js",
+    "static/js/2.41a8d376.chunk.js.map": "/Bit-People/static/js/2.41a8d376.chunk.js.map",
+    "index.html": "/Bit-People/index.html",
+    "precache-manifest.fc95d023e03c38c8369277998f423d3e.js": "/Bit-People/precache-manifest.fc95d023e03c38c8369277998f423d3e.js",
+    "service-worker.js": "/Bit-People/service-worker.js",
+    "static/css/2.6cc87aa2.chunk.css.map": "/Bit-People/static/css/2.6cc87aa2.chunk.css.map",
+    "static/css/main.1030fb37.chunk.css.map": "/Bit-People/static/css/main.1030fb37.chunk.css.map",
+    "static/js/2.41a8d376.chunk.js.LICENSE.txt": "/Bit-People/static/js/2.41a8d376.chunk.js.LICENSE.txt",
+    "static/media/not_found.png": "/Bit-People/static/media/not_found.74262339.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b851c0a3.js",
+    "static/css/2.6cc87aa2.chunk.css",
+    "static/js/2.41a8d376.chunk.js",
+    "static/css/main.1030fb37.chunk.css",
+    "static/js/main.baab454d.chunk.js"
+  ]
+}
