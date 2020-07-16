@@ -9,7 +9,7 @@ Each list and grid item displays: <br/>
 * Email icon and hidden email address<br/>
 * Birth date in DD.MM.YYYY format
 
-DEMO: 
+DEMO: [Bit People](https://nikolamitic95.github.io/Bit-People/#/)
 
 ## Stack
 
