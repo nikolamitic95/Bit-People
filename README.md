@@ -1,6 +1,6 @@
 ## Bit People
 
-User is able to see a LIST/GRID of users when App is started and have possibility to switch users view between LIST and GRID using view change button in the header. User is able to refresh page with new users by clicking on refresh button. User is able to go to About Page for more information about this App by clicking on About button and get back by clicking React People button. <br/>
+User is able to see a LIST/GRID of users when App is started and have possibility to switch users view between LIST and GRID using view change button in the header. User is able to refresh page with new users by clicking on refresh button. User is able to go to About Page for more information about this App by clicking on About button and get back by clicking React People button. Fully responsive. <br/>
 
 Each list and grid item displays: <br/>
 
