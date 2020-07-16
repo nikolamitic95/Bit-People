@@ -11,7 +11,7 @@ const Header = ({ isHomePage, isList, onLayoutChange, updateUsers }) => {
         <Navbar
             className={style.header}
             alignLinks="right"
-            brand={<a className="brand-logo">Bit People</a>}
+            brand={<a className={`${style.brand} brand-logo`}>Bit People</a>}
             centerChildren
             id="mobile-nav"
             menuIcon={<><div className={style.menu}></div><div className={style.menu}></div><div className={style.menu}></div></>}

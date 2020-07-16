@@ -4,6 +4,7 @@
 .gridUsers__user_name {
     position: absolute;
     color: white;
+    font-weight: 800;
     bottom: 116px;
     left: 5px;
     width: 349px;

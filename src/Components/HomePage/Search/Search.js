@@ -6,34 +6,31 @@ import style from './Search.module.css';
 
 
 
-class Search extends React.Component {
+const Search = ({ searchedUsers }) => {
 
-    onSearch = (e) => {
-        this.props.searchedUsers(e.target.value)
+   const onSearch = (e) => {
+        searchedUsers(e.target.value)
     }
 
-    render() {
-        return (
-            <Container>
-                <Row>
-                    <Col className={style.search}>
-                        <span>
-                            <i className={`${style.icon} fa fa-search`}></i>
-                        </span>
-                        <span className={style.form}>
-                            <Form >
-                                <FormControl type="text" value={this.props.inputValue}
-                                    onChange={this.onSearch} placeholder="Search users"
-                                    className={style.formBorder} />
-                            </Form>
-                        </span>
-                    </Col>
+    return (
+        <Container>
+            <Row>
+                <Col className={style.search}>
+                    <span>
+                        <i className={`${style.icon} fa fa-search`}></i>
+                    </span>
+                    <span className={style.form}>
+                        <Form >
+                            <FormControl type="text" 
+                                onChange={onSearch} placeholder="Search users"
+                                className={style.formBorder} />
+                        </Form>
+                    </span>
+                </Col>
+            </Row>
+        </Container >
 
-                </Row>
-            </Container >
-
-        )
-    }
+    )
 }
 
 export { Search };

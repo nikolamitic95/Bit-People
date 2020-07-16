@@ -5,7 +5,7 @@ import './Loading.css';
 const Loading = () => {
 
     return (
-        <div className="sticky">
+        <div>
             <div className="sk-cube-grid">
                 <div className="sk-cube sk-cube1"></div>
                 <div className="sk-cube sk-cube2"></div>

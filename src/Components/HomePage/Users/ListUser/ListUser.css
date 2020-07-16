@@ -5,7 +5,9 @@
     border: 1px solid rgb(200, 199, 199);
     border-bottom: none;
 }
-
+.users__user:hover {
+    box-shadow: 0px -3px 6px -3px black;
+}
 .users__user:last-child {
     border-bottom: 1px solid rgb(200, 199, 199);
 }
@@ -23,8 +25,14 @@
 }
 
 .users__user_info span {
-    font-weight: bold;
+    font-weight: 600;
 }
 .female{
     background-color: #f0d6d9;
+}
+.users__user_fontname{
+    font-size: 22px;
+}
+.users__user_font{
+    font-size: 16px;
 }

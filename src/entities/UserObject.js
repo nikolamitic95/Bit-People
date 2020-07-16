@@ -1,4 +1,4 @@
-class UserObj {
+class UserObject {
     constructor(userApi) {
         this.firstName = userApi.name.first
         this.lastName = userApi.name.last
@@ -10,4 +10,4 @@ class UserObj {
     }
 }
 
-export { UserObj }
+export { UserObject }

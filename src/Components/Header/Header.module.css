@@ -4,6 +4,10 @@
     height: 72px;
 }
 
+.brand{
+    font-size: 35px !important;
+}
+
 .icons {
     font-size: 25px !important;
     padding-top: 4px;
@@ -14,6 +18,7 @@
     height: 5px;
     background-color:white;
     margin: 6px 0;
+    text-align: center;
 }
       
 .menu:first-child{
@@ -43,6 +48,9 @@
    }
    .flex{
        flex-direction: column;
-       padding-left: 15px;
+       align-items: center;
+   }
+   .header{
+       padding-top: 6px;
    }
   }

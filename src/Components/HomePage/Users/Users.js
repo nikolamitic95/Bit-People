@@ -1,6 +1,6 @@
 import React from 'react';
 
-import style from './Users.module.css';
+import './Users.css';
 
 import { ListUser } from './ListUser/ListUser';
 import { GridUser } from './GridUser/GridUser';
@@ -18,26 +18,31 @@ const Users = ({ isList, users, isLoading }) => {
     if (!users.length) {
         return <NotFound />
     }
-    
+
+    let usersGrid = '';
+    if (!isList) {
+        usersGrid = 'usersGrid';
+    }
+
     return (
         <div>
             <Container>
-                <Row>
+                <Row className='rowMargin'>
                     <GenderCounter users={users} />
                 </Row>
             </Container>
-            <Container className={style.users}>
-                <Row className={style.margin}>
+            <Container className={`users ${usersGrid}`}>
+                <Row className='rowMargin'>
                     {users.map((user, i) => {
                         if (isList) {
                             return (
                                 <ListUser
                                     key={i}
-                                    img={user.picture.thumbnail}
-                                    name={user.name.first}
+                                    img={user.thumbImg}
+                                    name={user.firstName}
                                     email={user.email}
-                                    dob={user.dob.date}
-                                    last={user.name.last}
+                                    dob={user.dob}
+                                    last={user.lastName}
                                     gender={user.gender}
                                 />
                             )
@@ -47,14 +52,14 @@ const Users = ({ isList, users, isLoading }) => {
                             <GridUser
                                 key={i}
                                 gender={user.gender}
-                                img={user.picture.large}
-                                name={user.name.first}
+                                img={user.largeImg}
+                                firstName={user.firstName}
+                                lastName={user.lastName}
                                 email={user.email}
-                                dob={user.dob.date}
+                                dob={user.dob}
                                 gender={user.gender}
                             />
                         )
-
                     })}
                 </Row>
             </Container>

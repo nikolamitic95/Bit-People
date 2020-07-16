@@ -1,6 +1,9 @@
 import React from 'react';
+import style from './HomePage.module.css';
 
-import { fetchUsers } from '../../Data/fetch';
+import { fetchUsers } from '../../services/userService';
+import { storageService } from '../../services/storageService';
+import { search } from '../../shared/utilities';
 import { Header } from '../Header/Header';
 import { Users } from './Users/Users';
 import { Footer } from '../Footer/Footer';
@@ -15,21 +18,20 @@ class HomePage extends React.Component {
             isListView: true,
             users: [],
             filteredUsers: [],
-            inputValue: "",
             isLoading: false,
             timeAgo: ""
         }
     }
 
     componentDidMount() {
-        const savedUsers = localStorage.getItem("users");
-        const viewMode = localStorage.getItem("isListView");
+        const savedUsers = storageService.get("users");
+        const viewMode = storageService.get("isListView");
         if (!savedUsers) {
             this.getUsers()
         } else {
             this.setState({
-                users: JSON.parse(savedUsers),
-                filteredUsers: JSON.parse(savedUsers)
+                users: savedUsers,
+                filteredUsers: savedUsers
             })
             this.setState({ isListView: JSON.parse(viewMode) })
         }
@@ -41,37 +43,46 @@ class HomePage extends React.Component {
 
         fetchUsers()
             .then(data => {
-                this.setState({ users: data.results, filteredUsers: data.results, inputValue: '', timeAgo: new Date() },
+                this.setState({ users: data, filteredUsers: data, inputValue: '', timeAgo: new Date() },
                     () => {
-                        localStorage.setItem("users", JSON.stringify(data.results))
+                        storageService.set("users", data)
                     })
             })
             .finally(() => this.setState({ isLoading: false }));
     }
+
     searchedUsers = (textInput) => {
-        const newUsers = this.state.users.filter(user => {
-            return user.name.first.toLowerCase().includes(textInput.toLowerCase()) || user.name.last.toLowerCase().includes(textInput.toLowerCase())
-        });
-        this.setState({
-            inputValue: textInput,
-            filteredUsers: newUsers
-        })
+        const res = search(this.state.users, ['firstName', 'lastName'], textInput)
+        this.setState({ filteredUsers: res })
     }
 
     onLayoutChange() {
         this.setState({ isListView: !this.state.isListView },
             () => {
-                localStorage.setItem("isListView", JSON.stringify(this.state.isListView))
+                storageService.set("isListView", this.state.isListView)
             })
     }
 
     render() {
 
         return (
-            <div>
-                <Header isHomePage={true} isList={this.state.isListView} onLayoutChange={this.onLayoutChange} updateUsers={() => this.getUsers()} />
-                <Search searchedUsers={this.searchedUsers} users={this.state.users} inputValue={this.state.inputValue} />
-                <Users isList={this.state.isListView} users={this.state.filteredUsers} isLoading={this.state.isLoading} />
+            <div className={style.home}>
+                <div className={style.content}>
+                    <Header
+                        isHomePage={true}
+                        isList={this.state.isListView}
+                        onLayoutChange={this.onLayoutChange}
+                        updateUsers={() => this.getUsers()}
+                    />
+
+                    <Search
+                        searchedUsers={this.searchedUsers} />
+
+                    <Users
+                        isList={this.state.isListView}
+                        users={this.state.filteredUsers}
+                        isLoading={this.state.isLoading} />
+                </div>
                 <Footer time={this.state.timeAgo} />
             </div >
         );

@@ -1,8 +1,6 @@
 .search{
-    margin-bottom: 10px;
+    margin-bottom: 0px !important;
     display: flex;
-    padding-right: 0px !important;
-    padding-left: 0px !important;
 }
 .icon{
    font-size: 25px;

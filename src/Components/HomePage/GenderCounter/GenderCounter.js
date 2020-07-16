@@ -8,7 +8,6 @@ const GenderCounter = ({ users }) => {
 
     let male = 0;
     let female = 0;
-    console.log(users);
 
     users.forEach(user => {
         if (user.gender === "male") {
@@ -19,7 +18,7 @@ const GenderCounter = ({ users }) => {
     });
     return (
         <Col className={style.gender}>
-            <p>Male: {male} Female: {female}</p>
+            <p className={style.font}>Male: {male} Female: {female}</p>
         </Col>
     )
 }
